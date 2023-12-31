@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+    min-height: 200vh;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(img/laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 1.5em;
+    user-select: none;
+    margin-left: 5px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav .hideOnMobile {
+    margin-right: 5px;
+}
+
+nav .hideOnMobile:hover{
+    background-color: #1b1a1a;
+    border-radius: 80px;
+    height: 35px;
+    color: white;
+}
+
+nav .hideOnMobile a:hover {
+    color: aliceblue;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.394);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.side-bar li {
+    width: 100%;
+}
+
+.side-bar a {
+    width: 100%;
+}
+
+.nav-mobile a:hover {
+    background-color: red;
+    backdrop-filter: blur(20px);
+    height: 35px;
+    color: white;
+}
+
+.menu-buttom {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-buttom {
+        display: flex;
+    }
+
+    .nav-mobile a:hover {
+        background-color: red;
+        backdrop-filter: blur(20px);
+        height: 35px;
+        color: white;
+    }
+}
+
+@media(max-width: 400px) {
+    .side-bar {
+        width: 100%;
+    }
+
+    .nav-mobile a:hover {
+        background-color: red;
+        backdrop-filter: blur(20px);
+        height: 35px;
+        color: white;
+    }
+}
